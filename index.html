@@ -2,29 +2,128 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Vente de Licorne</title>
+    <title>LicorneRent - Location de Licornes Magiques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: purple;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffe6f0;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #ffccf2;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: purple;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: "🦄 ";
+        }
+
+        footer {
+            text-align: center;
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #fff0f5; text-align: center; padding: 40px;">
+<body>
 
-    <h1>🦄 Vente de Licorne Magique</h1>
-    <img src="https://via.placeholder.com/400x300?text=Licorne+Magique" alt="Licorne Magique" style="border-radius: 10px;">
+<header>
+    <h1>🦄 LicorneRent</h1>
+    <p>Location de Licornes Magiques pour vos événements féeriques</p>
+</header>
 
-    <h2>Licorne Arc-en-ciel 2025</h2>
-    <p>Une licorne unique qui vole, chante et fait apparaître des arcs-en-ciel 🌈</p>
+<nav>
+    <button onclick="showTab('about')">Qui sommes-nous ?</button>
+    <button onclick="showTab('services')">Nos services</button>
+    <button onclick="showTab('contact')">Contactez-nous</button>
+</nav>
 
-    <ul style="list-style: none; padding: 0;">
-        <li>✨ Pelage : blanc nacré avec crinière arc-en-ciel</li>
-        <li>🌟 Capacité magique : vol, téléportation, pluie de paillettes</li>
-        <li>🍬 Nourriture préférée : barbe à papa rose</li>
+<div id="about" class="tab-content active">
+    <h2>Qui sommes-nous ?</h2>
+    <p><strong>LicorneRent</strong> est une entreprise féerique spécialisée dans la location de licornes magiques pour tous vos événements inoubliables. 🌈</p>
+    <p>Notre mission est de saupoudrer votre vie de magie, de sourires et d’émerveillement ✨</p>
+    <h3>Nos valeurs :</h3>
+    <ul>
+        <li>Magie et émerveillement au quotidien</li>
+        <li>Respect et bien-être de nos licornes</li>
+        <li>Expérience client enchantée</li>
+        <li>Écologie et respect de l'environnement féérique</li>
     </ul>
+</div>
 
-    <h3 style="color: purple;">Prix : 0 €</h3>
+<div id="services" class="tab-content">
+    <h2>Nos services</h2>
+    <p>Nous proposons la location de licornes pour différents types d’événements :</p>
+    <ul>
+        <li><strong>Mariages :</strong> arrivée féerique des mariés, séance photo magique, licorne porte-alliances</li>
+        <li><strong>Anniversaires :</strong> balade avec la licorne, animations pour enfants, pinata magique</li>
+        <li><strong>Baptêmes :</strong> bénédiction arc-en-ciel, parade enchantée, cadeau surprise étoilé</li>
+    </ul>
+</div>
 
-    <button style="padding: 10px 20px; font-size: 16px; background-color: pink; border: none; border-radius: 8px; cursor: pointer;">
-        Acheter maintenant
-    </button>
+<div id="contact" class="tab-content">
+    <h2>Contactez-nous</h2>
+    <p>📍 Adresse : 123 Rue de la Magie, 75000 Féérie-sur-Seine</p>
+    <p>📞 Téléphone : +33 6 99 99 99 99</p>
+    <p>📧 Email : contact@licornerent.com</p>
+    <p>🕐 Horaires : Du lundi au samedi, de 9h à 19h</p>
+</div>
 
-    <p style="margin-top: 40px; font-size: 12px; color: gray;">Offre valable jusqu'à la prochaine pleine lune 🌕</p>
+<footer>
+    © 2025 LicorneRent - Tous droits réservés ✨
+</footer>
+
+<script>
+    function showTab(id) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
